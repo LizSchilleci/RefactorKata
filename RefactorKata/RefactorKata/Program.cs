@@ -15,8 +15,8 @@ namespace RefactorKata
             /*
              * cmd.CommandText = "Select * from Invoices";
              */
-            System.Data.SqlClient.SqlDataReader reader = cmd.ExecuteReader();
-            List<Product> products = new List<Product>();
+			 var reader = cmd.ExecuteReader();
+			 var products = new List<Product>();
 
             //TODO: Replace with Dapper
             while (reader.Read())
