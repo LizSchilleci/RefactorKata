@@ -16,7 +16,6 @@ namespace RefactorKata
 			 var reader = cmd.ExecuteReader();
 			 var products = new List<Product>();
 
-            //TODO: Replace with Dapper
             while (reader.Read())
             {
                 var prod = new Product();
@@ -25,7 +24,7 @@ namespace RefactorKata
             }
             conn.Dispose();
             Console.WriteLine("Products Loaded!");
-            for (int i =0; i< products.Count; i++)
+            foreach (var product in products)
             {
                 Console.WriteLine(products[i].name);
             }
