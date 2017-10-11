@@ -19,7 +19,7 @@ namespace RefactorKata
             while (reader.Read())
             {
                 var prod = new Product();
-                prod.name = reader["Name"].ToString();
+                prod.Name = reader["Name"].ToString();
                 products.Add(prod);
             }
             conn.Dispose();
@@ -32,7 +32,6 @@ namespace RefactorKata
     }
     public class Product
     {
-        public string name;
-        public string Name { get { return name; } set { name = value; } }
+        public string Name { get; set; }
     }
 }
