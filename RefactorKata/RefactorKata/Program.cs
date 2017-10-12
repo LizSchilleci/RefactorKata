@@ -6,7 +6,7 @@ namespace RefactorKata
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var conn = new SqlConnection("Server=.;Database=myDataBase;User Id=myUsername;Password = myPassword;");
 
@@ -26,7 +26,7 @@ namespace RefactorKata
             Console.WriteLine("Products Loaded!");
             foreach (var product in products)
             {
-                Console.WriteLine(products[i].name);
+                Console.WriteLine("This product is called: " + product.Name);
             }
         }
     }
